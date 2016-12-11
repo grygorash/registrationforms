@@ -1,0 +1,676 @@
+/******************************
+ * Author: Pit, Date: 04/02/16, Skype: hostings1
+ ******************************/
+
+/* 0. fonts
+     ================================================ */
+
+
+/* 1. base
+     ================================================ */
+
+$g-color: #011407
+$success: #3dcf7e
+$successoff: #50926d
+$default: #eee
+$danger: #f5694e
+
+
+html
+	font-size: 100%
+	overflow-y: scroll
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-modal-wrap: 100%
+
+body
+	font: normal 14px/1 'Montserrat', Arial, Helvetica, sans-serif
+	color: $g-color
+	background-color: #f2f2f2
+	
+a
+	color: $g-color
+	text-decoration: none
+	&:hover 
+		text-decoration: none
+.fl 
+	float: left
+.fr
+	float: right
+
+.text-center
+	text-align: center !important
+.text-left
+	text-align: left !important
+.text-right 
+	text-align: right !important
+	
+/* 3. buttons
+     ================================================ */
+button:active button:focus 
+  outline: none
+/* 4. forms
+     ================================================ */
+input[type='text'], 
+input[type='number'], 
+input[type='email'], 
+input[type='tel'], 
+input[type='search'], 
+input[type='url'], 
+input[type='file'], 
+input[type='password'], 
+textarea
+	height: 34px
+	background: #fff
+	border: 2px solid #eee
+	border-radius: 4px
+	color: #8c9c93
+	padding: 0 30px 0 5px 
+	font-style: italic
+	font-size: 14px
+	width: 100%
+	&:focus
+		border: 2px solid $success
+		outline: none
+		box-shadow: 0 0 5px rgba(51,204,102,.7)
+textarea 
+	height: auto
+	resize: none
+	min-height: 100px
+span
+	.text-success
+		color: $success
+
+/* 5. header
+     ================================================ */
+
+.clr 
+	overflow: auto
+	zoom: 1
+
+.container
+	margin: 100px auto
+
+.box
+	margin-bottom: 30px
+	border-radius: 4px
+	background-color: #fff
+	box-shadow: 0 1px 1px rgba(223,223,223,.75)
+	padding: 20px
+	&--lg
+		padding: 20px 40px
+		.nav	
+			padding: 23px 0 
+	&--br
+		border-top: 5px solid $success
+		padding-top: 40px
+		padding-bottom: 40px
+.nav	
+	margin: 0
+	padding: 0
+	list-style: none
+	float: left
+	li
+		display: inline-block
+		text-decoration: none
+		&+li
+			margin-left: 25px
+		a	
+			text-transform: uppercase
+			text-decoration: none
+			font-weight: 600
+			&:hover
+				color: $success 
+				text-decoration: none
+			&:active
+				color: $successoff
+				text-decoration: none
+
+		
+
+.status
+	padding: 14px 0 
+	float: right
+	.online
+		position: relative
+		display: inline-block
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 2px solid $success
+		cursor: pointer
+		&:hover:after
+			content: ""
+			display: block
+			position: absolute
+			top: 3px
+			left: 3px
+			right: 3px
+			bottom: 3px
+			background-color: $success
+			border-radius: 50%
+			cursor: pointer
+	.offline
+		margin-right: 10px
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		border: 2px solid $danger
+		display: inline-block
+		cursor: pointer
+		position: relative
+		&:hover:after
+			content: ""
+			display: block
+			position: absolute
+			top: 3px
+			left: 3px
+			right: 3px
+			bottom: 3px
+			background-color: $danger
+			border-radius: 50%
+			cursor: pointer
+
+.profile
+	float: left
+	&__img
+		float: left
+	&__img1
+		float: none
+		img
+			width: 120px
+			height: 120px
+			border-radius: 50%
+			border: 5px solid #F2F2F2
+	&__info
+		margin-left: 67px
+		padding-top: 13px
+		h4
+			margin: 5px 0 0 0 
+			font-size: 18px
+			a
+				color: $success
+				text-decoration: none
+				font-weight: 500
+				&:hover
+					color: lighten($success, 7%)
+				&:active
+					color: darken($success, 7%)
+	&--lg
+		float: none
+.nav__ic
+	padding: 20px 0
+	float: right
+	.ic
+		display: inline-block
+		margin-left: 16px
+		position: relative
+		kbd
+		    background-color: $success
+		    border-radius: 50%
+		    bottom: 11px
+		    right: -12px
+		    padding: 2px 5px
+		    position: absolute
+		    color: white
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar	
+	padding-top: 13px
+	padding-bottom: 13px
+	.devider
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 2px
+			height: 40px
+			background-color: #eee
+			right: 50px
+			top: -3px
+	.nav__ic
+		padding: 7px 0 
+	.nav
+		padding: 10px 0
+		margin-left: -17px
+	.profile
+		padding: 2px 0
+		&__img
+			img
+				height: 30px
+				width: 30px
+				border: none
+		&__info
+			padding-top: 0
+			margin-left: 37px
+
+.navbar-form
+	position: relative
+	width: 290px
+	input
+		width: 290px
+		&:focus
+			border: 2px solid $success
+			outline: none
+			box-shadow: 0 0 5px rgba(51,204,102,.7)
+	button 
+		position: absolute
+		border: none
+		background-color: #fff
+		width: 16px
+		height: 16px
+		display: block
+		top: 9px
+		right: 15px
+
+
+
+
+
+
+
+
+
+
+
+
+.login
+	h4
+		display: block
+		text-align: center
+		font-size: 18px
+		font-weight: 600
+		text-transform: uppercase
+		margin: 0
+		margin-bottom: 40px
+	form
+		position: relative
+		img
+			position: absolute
+		.log
+			padding-top: 11px
+			padding-left: 12px
+		.pass
+			padding-top: 11px
+			padding-left: 10px
+		input
+			margin-bottom: 18px
+			height: 40px
+			padding: 0 5px 0 30px
+.social
+	float: right
+	&--lg
+		float: none
+	.btn--twit
+		border: none
+		background-color: #25AAE2
+		color: #fff
+		border-radius: 4px
+		padding: 15px
+		border-right: 2px solid darken(#25AAE2, 7%)
+		border-bottom: 4px solid darken(#25AAE2, 7%)
+		&:hover
+			background-color: lighten(#25AAE2, 7%)
+		&:active
+			background-color: darken(#25AAE2, 7%)
+			
+	.btn--fb
+		border: none
+		background-color: #0F75BD
+		color: #fff
+		border-radius: 4px
+		padding: 15px 18px
+		border-right: 2px solid darken(#0F75BD, 7%)
+		border-bottom: 4px solid darken(#0F75BD, 7%)
+		&:hover
+			background-color: lighten(#0F75BD, 7%)
+		&:active
+			background-color: darken(#0F75BD, 7%)
+	.btn--google
+		border: none
+		background-color: #F5694E
+		color: #fff
+		border-radius: 4px
+		padding: 15px 13px
+		border-right: 2px solid darken(#F5694E, 7%)
+		border-bottom: 4px solid darken(#F5694E, 7%)
+		&:hover
+			background-color: lighten(#F5694E, 7%)
+		&:active
+			background-color: darken(#F5694E, 7%)
+	.btn--plus
+		border: none
+		background-color: #EEEEEE
+		color: black
+		border-radius: 4px
+		padding: 15px 16px
+		border-right: 2px solid darken(#EEEEEE, 7%)
+		border-bottom: 4px solid darken(#EEEEEE, 7%)
+		&:hover
+			background-color: lighten(#EEEEEE, 2%)
+		&:active
+			background-color: darken(#EEEEEE, 7%)
+	span
+		font-style: italic
+		text-transform: uppercase
+		color: #8C9C93
+		font-family: Arial
+		padding-right: 6px
+
+
+.login	
+	float: left
+	button
+		border: none
+		background-color: $success
+		color: #fff
+		border-radius: 4px
+		padding: 15px 45px
+		text-transform: uppercase
+		font-size: 14px
+		border-right: 2px solid darken($success, 7%)
+		border-bottom: 4px solid darken($success, 7%)
+		&:hover
+			background-color: lighten($success, 7%)
+		&:active
+			background-color: darken($success, 7%)
+
+	.devider2
+		width: 100%;
+		height: 2px;
+		background-color: #ededed;
+		clear: both
+		margin: 40px 0 
+
+.footer__login 
+	.left
+		float: left
+	.right
+		float: right
+	a
+		text-decoration: none
+		font-size: 13px
+		font-weight: 500
+		&:hover
+			color: $success
+		&:active
+			color: darken($success, 7%)
+		span
+			color: $success
+
+.register
+	h4
+		display: block
+		text-align: center
+		font-size: 18px
+		font-weight: 600
+		text-transform: uppercase
+		margin: 0
+		margin-bottom: 40px
+	form
+		position: relative
+		img
+			position: absolute
+		.log
+			padding-top: 11px
+			padding-left: 12px
+		.pass
+			padding-top: 11px
+			padding-left: 10px
+		.mail
+			padding-top: 14px
+			padding-left: 10px
+			-webkit-text-security: circle;
+		input
+			margin-bottom: 25px
+			height: 40px
+			padding: 0 5px 0 30px
+	button
+		border: none
+		background-color: $success
+		color: #fff
+		border-radius: 4px
+		padding: 15px 45px
+		text-transform: uppercase
+		font-size: 14px
+		border-right: 2px solid darken($success, 7%)
+		border-bottom: 4px solid darken($success, 7%)
+		width: 100%
+		&:hover
+			background-color: lighten($success, 7%)
+		&:active
+			background-color: darken($success, 7%)
+
+.progress
+	margin-bottom: 35px
+	margin-top: 15px
+	&__count
+		float: right
+	&__wrap
+		margin-top: 10px
+		height: 8px
+		background-color: #eee
+		border-radius: 4px
+		& > div
+			height: 8px
+			background-color: $success
+			border-radius: 4px
+			width: 77%
+
+	
+
+.checkbox
+	cursor: pointer
+	.checkbox1
+		position: absolute
+		margin-left: -20px
+		margin-top: 12px
+	.chk1
+		position: absolute
+		padding-left: 30px
+	.chk
+		position: relative
+		display: block
+		width: 40px
+		height: 20px
+		background-color: #F5694E
+		border-radius: 50px
+		transition: background-color 0.2s ease-in-out
+		//box-shadow: inset 0 0 10px 2px rgba(0,0,0,0.1)
+		&:after
+			content: ''
+			position: absolute
+			width: 14px
+			height: 70%
+			background-color: #fff
+			border-radius: 50%
+			left: 4px
+			top: 15%
+			transition: left 0.2s ease-in-out
+			//box-shadow: inset 2px -2px 4px 2px rgba(0,0,0,.1)
+	input
+		display: none
+		position: absolute
+		&:checked + .chk
+			background-color: $success
+			&:after
+				left: 40px - 18px
+	label
+		position: relative
+		display: block
+		line-height: 22px
+		padding-left: 20px
+		cursor: pointer
+	a
+		color: $success
+		&:hover
+			text-decoration: underline	
+			color: $successoff
+
+
+
+
+
+
+
+
+
+
+
+
+.box__title
+	display: block
+	text-align: center
+	font-size: 18px
+	font-weight: 600
+	text-transform: uppercase
+	margin: 0
+	margin-bottom: 40px
+
+.il
+	margin-bottom: 15px
+	margin-top: 15px
+	&__title
+		color: #8C9C93
+	&__count
+		float: right
+	&__wrap
+		margin-top: 10px
+		height: 22px
+		background-color: #eee
+		border-radius: 4px
+		& > div
+			height: 22px
+			background-color: $success
+			border-radius: 4px
+			width: 65%
+.ps 
+	margin-bottom: 15px
+	margin-top: 15px
+	&__title
+		color: #8C9C93
+	&__count
+		float: right
+	&__wrap
+		margin-top: 10px
+		height: 22px
+		background-color: #eee
+		border-radius: 4px
+		& > div
+			height: 22px
+			background-color: $success
+			border-radius: 4px
+			width: 90%
+.html
+	margin-bottom: 15px
+	margin-top: 15px
+	&__title
+		color: #8C9C93
+	&__count
+		float: right
+	&__wrap
+		margin-top: 10px
+		height: 22px
+		background-color: #eee
+		border-radius: 4px
+		& > div
+			height: 22px
+			background-color: $success
+			border-radius: 4px
+			width: 75%
+.php
+	margin-top: 15px
+	&__title
+		color: #8C9C93
+	&__count
+		float: right
+	&__wrap
+		margin-top: 10px
+		height: 22px
+		background-color: #eee
+		border-radius: 4px
+		& > div
+			height: 22px
+			background-color: $success
+			border-radius: 4px
+			width: 40%
+.profile--wrap
+	text-align: center
+	position: relative
+	margin-top: 15px
+	h4
+		font-size: 24px
+		margin: 0
+		padding-top: 20px
+		a
+			color: $success			
+			font-weight: 500
+			text-decoration: none
+			&:hover
+				color: lighten($success, 7%)
+			&:active
+				color: darken($success, 7%)
+	p
+		margin: 0
+		padding-top: 8px
+		font-weight: 700
+	.fol
+		padding-top: 28px
+		a
+			color: $success			
+			font-weight: 500
+			text-decoration: none
+			&:hover
+				color: lighten($success, 7%)
+			&:active
+				color: darken($success, 7%)
+	.active
+		position: absolute
+		margin-left: 160px
+		.online
+			position: absolute
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 2px solid $success
+			cursor: pointer
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				top: 3px
+				left: 3px
+				right: 3px
+				bottom: 3px
+				background-color: $success
+				border-radius: 50%
+				cursor: pointer
+
+.social--lg
+	padding-top: 30px
+
+/* 6. content
+  	================================================ */
+
+
+/* 7. footer
+     ================================================ */
+
+
+/* 8. media
+     ================================================ */
